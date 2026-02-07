@@ -24,7 +24,7 @@ Billetera digital en **Java** con arquitectura en capas. Permite registrar usuar
 |-----------|-----------|
 | **[DOCUMENTACION.md](DOCUMENTACION.md)** | Documentación completa: arquitectura, componentes, instalación, uso, SOLID |
 | **[DIAGRAMA_CLASES.md](DIAGRAMA_CLASES.md)** | Diagrama de clases actualizado (capas, relaciones) |
-| **[Alke Wallet Class Diagram.png](Alke Wallet Class Diagram.png)** | Diagrama de clases principales |
+| **Alke Wallet Class Diagram.png** | Diagrama de clases principales |
 | **[INFORME_TESTS.md](INFORME_TESTS.md)** | Informe de pruebas unitarias (45 tests, estructura, ejecución) |
 
 Proyecto educativo · Alkemy Digital · Módulo 2 - Programación en Java · 2026
