@@ -4,7 +4,7 @@ Billetera digital en **Java** con arquitectura en capas. Permite registrar usuar
 
 ## Presentación de prototipo
 
-[Link Video](https://youtu.be/0-4-0m-9-8w)
+[Link Video](https://www.youtube.com/watch?v=PWJpzSRawnI)
 
 ## Inicio rápido
 
