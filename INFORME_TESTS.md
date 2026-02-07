@@ -34,8 +34,6 @@ app/src/test/java/proyectowallet/
     └── ValidationUtilTest.java      (3 tests) → ValidationUtil
 ```
 
-**Nota:** `ServiceTest.java` en la raíz de `proyectowallet` está deprecado y vacío; los tests están en las clases anteriores.
-
 ---
 
 ## Desglose por clase
