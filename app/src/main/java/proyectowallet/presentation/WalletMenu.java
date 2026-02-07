@@ -19,6 +19,7 @@ public class WalletMenu {
     private final Scanner scanner;
     private boolean running;
 
+    // Constructor de la clase WalletMenu
     public WalletMenu(WalletController controller, Scanner scanner) {
         this.controller = controller;
         this.scanner = scanner;
@@ -30,6 +31,7 @@ public class WalletMenu {
      */
     public void run() {
         while (running) {
+            // Imprimir el menú de opciones
             UIFormatter.printMenu(
                     "Registrar nuevo usuario",
                     "Crear cuenta",
@@ -41,9 +43,11 @@ public class WalletMenu {
                     "Salir"
             );
 
+            // Leer la opción seleccionada por el usuario
             String choice = scanner.nextLine().trim();
             UIFormatter.printSeparator();
 
+            // Evaluar la opción seleccionada por el usuario
             switch (choice) {
                 case "1" -> handleUserRegistration();
                 case "2" -> handleAccountCreation();
@@ -58,6 +62,7 @@ public class WalletMenu {
         }
     }
 
+    // Método para manejar el registro de un nuevo usuario
     private void handleUserRegistration() {
         UIFormatter.printHeader("Registrar Nuevo Usuario");
 
@@ -78,6 +83,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar la creación de una nueva cuenta
     private void handleAccountCreation() {
         UIFormatter.printHeader("Crear Cuenta");
 
@@ -157,6 +163,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar la visualización del saldo
     private void handleViewBalance() {
         UIFormatter.printHeader("Ver Saldo");
 
@@ -245,6 +252,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar el depósito de dinero
     private void handleDeposit() {
         UIFormatter.printHeader("Realizar Depósito");
 
@@ -274,6 +282,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar el retiro de dinero
     private void handleWithdrawal() {
         UIFormatter.printHeader("Realizar Retiro");
 
@@ -304,6 +313,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar la conversión de moneda
     private void handleCurrencyConversion() {
         UIFormatter.printHeader("Convertir Moneda");
 
@@ -352,6 +362,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para manejar el historial de transacciones
     private void handleTransactionHistory() {
         UIFormatter.printHeader("Historial de Transacciones");
 
@@ -386,6 +397,7 @@ public class WalletMenu {
         pause();
     }
 
+    // Método para seleccionar un usuario y una cuenta
     /**
      * Pide selección de usuario y cuenta y establece la cuenta actual en el controlador.
      * @return true si se seleccionó correctamente, false si hubo error (ya se hizo pause).
@@ -438,6 +450,7 @@ public class WalletMenu {
         return true;
     }
 
+    // Método para pausar la ejecución del programa
     private void pause() {
         System.out.print("\nPresione Enter para continuar...");
         scanner.nextLine();
@@ -445,6 +458,7 @@ public class WalletMenu {
         System.out.flush();
     }
 
+    // Método para analizar la selección del menú
     private int parseMenuChoice(String input, int maxOptions) {
         try {
             int choice = Integer.parseInt(input) - 1;
@@ -454,6 +468,13 @@ public class WalletMenu {
         }
     }
 
+    // Método para analizar la selección del menú
+    /**
+     * Analiza la selección del menú y devuelve el número de la opción seleccionada.
+     * @param input La selección del usuario.
+     * @param maxOptions El número de opciones disponibles.
+     * @return El número de la opción seleccionada o -1 si la selección es inválida.
+     */
     private double parseDouble(String input) {
         try {
             return Double.parseDouble(input);
