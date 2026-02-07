@@ -8,8 +8,7 @@ import java.util.*;
 
 /**
  * Orquestador principal de los casos de uso de Alke Wallet.
- * <p>
- * <b>Capa de aplicación</b>: coordina las operaciones de la billetera (registro,
+ * Capa de aplicación: coordina las operaciones de la billetera (registro,
  * cuentas, depósitos, retiros, conversión) y delega en los servicios de dominio.
  * No contiene lógica de presentación; es usado por la capa de presentación.
  * Implementa principios SOLID: Dependency Injection.
@@ -21,6 +20,7 @@ public class WalletController {
     private final Map<String, User> users;
     private Account currentAccount;
 
+    // Constructor de la clase WalletController
     public WalletController(AccountService accountService,
                           TransactionService transactionService,
                           CurrencyConverterService currencyConverter) {
